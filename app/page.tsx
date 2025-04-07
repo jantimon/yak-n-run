@@ -7,7 +7,14 @@ import { Hero } from "../components/hero/hero";
 export default function Page() {
   return (
     <>
-      <h1>Yak&apos;n&apos;run</h1>
+      <h1
+        css={css`
+          text-align: center;
+          color: #eee;
+        `}
+      >
+        Yak&apos;n&apos;run
+      </h1>
       <div
         css={css`
           justify-self: center;
