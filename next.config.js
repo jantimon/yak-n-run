@@ -2,10 +2,9 @@
 import { withYak } from "next-yak/withYak";
 
 const nextConfig = {
+  output: 'export',
   images: {
-    disableStaticImages: true, // This prevents Next.js from automatically optimizing imported images
-    // If you still want to use Next.js Image component elsewhere but handle .avif files differently:
-    // formats: ['image/avif', 'image/webp'], // Include AVIF format in supported formats
+    disableStaticImages: true,
   },
   webpack(config) {
     // Add AVIF file handling
