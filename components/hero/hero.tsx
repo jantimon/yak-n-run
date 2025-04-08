@@ -1,4 +1,5 @@
 import { styled, keyframes } from "next-yak";
+import { HeroController } from "./heroController";
 
 // Sprite mapping
 const runAnimation = keyframes`
@@ -58,14 +59,20 @@ const runAnimation = keyframes`
   }
 `;
 
-export const Hero = styled.div`
+export const Hero = styled(HeroController)`
   width: 529px;
   height: 529px;
-  background-image: url("./images/hero.avif");
+  border: none;
+  display: block;
+  background: url("./images/hero.avif");
   transform: scale(0.5);
   animation: ${runAnimation} 1s steps(1) infinite;
+  animation-play-state: running;
   margin: 0 auto;
   position: relative;
   top: -33px;
   z-index: 2;
+  transition: translate 0.3s linear;
+  outline: none;
+  cursor: none;
 `;

@@ -2,7 +2,7 @@ import React from "react";
 import { styled, keyframes } from "next-yak";
 
 export const Level = ({ children }: { children: React.ReactNode }) => (
-  <Back>
+  <Back className="level">
     <TreesBack>
       <TreesFront>{children}</TreesFront>
     </TreesBack>
@@ -35,6 +35,7 @@ const treesFrontOriginalHeight = 1000;
 const treesFrontHeight = 150;
 
 const Back = styled.div`
+  container-type: inline-size;
   width: 100%;
   overflow: clip;
   background: #7ea4ad;

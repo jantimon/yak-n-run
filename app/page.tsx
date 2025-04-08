@@ -3,6 +3,8 @@ import "./global.css";
 import { css } from "next-yak";
 import { Level } from "../components/level/level";
 import { Hero } from "../components/hero/hero";
+import { CoinGroup } from "../components/coin/coin";
+import { Glow } from "../components/glow/glow";
 
 export default function Page() {
   return (
@@ -26,9 +28,12 @@ export default function Page() {
           cursor: none;
         `}
       >
-        <Level>
-          <Hero />
-        </Level>
+        <Glow>
+          <Level>
+            <CoinGroup count={4} />
+            <Hero />
+          </Level>
+        </Glow>
       </div>
     </>
   );

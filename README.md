@@ -18,7 +18,7 @@ The project features a running yak character that moves through a parallax scrol
 ```
 ├─ app
 │  ├─ global.css        # Global styles
-│  ├─ layout.tsx        # Root layout component 
+│  ├─ layout.tsx        # Root layout component
 │  └─ page.tsx          # Main page component
 └─ components
    ├─ hero              # Yak character component
