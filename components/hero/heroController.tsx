@@ -9,7 +9,6 @@ export const HeroController = (props) => (
     ref={(ref) => {
       const button = ref;
       const level = button.closest(".level");
-      console.log("ref", ref, level);
       if (!button || !level) {
         return;
       }

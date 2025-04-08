@@ -2,7 +2,6 @@
 import { withYak } from "next-yak/withYak";
 
 const nextConfig = {
-  output: "export",
   images: {
     disableStaticImages: true,
   },
