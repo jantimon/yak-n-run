@@ -1,6 +1,3 @@
-/** @jsxImportSource next-yak */
-import "./global.css";
-import { css } from "next-yak";
 import { Level } from "../components/level/level";
 import { Hero } from "../components/hero/hero";
 import { CoinGroup } from "../components/coin/coin";
@@ -10,23 +7,20 @@ export default function Page() {
   return (
     <>
       <h1
-        css={css`
-          text-align: center;
-          color: #eee;
-        `}
+        className="text-center text-[#eee]"
       >
-        Yak&apos;n&apos;run
+        Yak'n'run
       </h1>
       <div
-        css={css`
-          justify-self: center;
-          width: max(50%, 529px);
-          transition: width 0.3s ${easing};
-          &:hover {
-            width: 90%;
-          }
-          cursor: none;
-        `}
+        className="
+          justify-self-center
+          w-[max(50%,_529px)]
+          transition-all duration-300
+          [--tw-ease:var(--transition-bounce)]
+          hover:w-[90%]
+          cursor-none
+          mx-auto
+        "
       >
         <Glow>
           <Level>
@@ -38,7 +32,3 @@ export default function Page() {
     </>
   );
 }
-
-/** Bounce */
-const easing =
-  "linear(0,0.01,0.04 1.6%,0.161 3.3%,0.816 9.4%,1.046,1.189 14.4%,1.231,1.254 17%,1.259,1.257 18.6%,1.236,1.194 22.3%,1.057 27%,0.999 29.4%,0.955 32.1%,0.942,0.935 34.9%,0.933,0.939 38.4%,1 47.3%,1.011,1.017 52.6%,1.016 56.4%,1 65.2%,0.996 70.2%,1.001 87.2%,1)";

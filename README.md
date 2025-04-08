@@ -9,7 +9,7 @@ The project features a running yak character that moves through a parallax scrol
 ## Technology Stack
 
 - **Next.js**: React framework for the application structure
-- **next-yak**: Custom styling solution (CSS-in-JS) for the project
+- **Tailwind CSS**: Utility-first CSS framework for styling
 - **CSS Animations**: Keyframes for sprite animations and parallax effects
 - **AVIF Images**: Modern image format for efficient sprite sheets
 
