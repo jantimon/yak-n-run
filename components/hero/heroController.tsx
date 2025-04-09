@@ -1,5 +1,7 @@
 "use client";
 
+const JUMP_HEIGHT = 110;
+
 export const HeroController = (props) => (
   <button
     {...props}
@@ -18,18 +20,17 @@ export const HeroController = (props) => (
         if (animation) {
           return;
         }
-        animation = button.animate(
-          [
-            { translate: "0 0px" },
-            { translate: "0 -90px" },
-            { translate: "0 0px" },
-          ],
-          {
-            duration: 800,
-            easing: "ease-out",
-            fill: "forwards",
-          },
-        );
+        const keyframes = Array.from({ length: 100 }, (_, i) => {
+          const progress = i / 99;
+          const y = Math.sin(progress * Math.PI) * -JUMP_HEIGHT; // Sine curve for smooth jump that emulates gravity
+          return { translate: `0 ${y}px` };
+        });
+
+        animation = button.animate(keyframes, {
+          duration: 450,
+          easing: "linear", // Linear easing to follow the sine curve naturally
+          fill: "forwards",
+        });
         await animation.finished;
         animation = null;
       };
