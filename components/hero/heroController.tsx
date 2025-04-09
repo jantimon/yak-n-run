@@ -27,8 +27,7 @@ export const HeroController = (props) => (
 
         animation = button.animate(keyframes, {
           duration: 450,
-          easing: "linear", // Linear easing to follow the sine curve naturally
-          fill: "forwards",
+          easing: "linear",
         });
         await animation.finished;
         animation = null;
