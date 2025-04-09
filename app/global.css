@@ -1,5 +1,81 @@
+/* Define CSS variables for animations and calculations */
+:root {
+  /* Bounce Easing */
+  --transition-bounce: linear(
+    0,
+    0.01,
+    0.04 1.6%,
+    0.161 3.3%,
+    0.816 9.4%,
+    1.046,
+    1.189 14.4%,
+    1.231,
+    1.254 17%,
+    1.259,
+    1.257 18.6%,
+    1.236,
+    1.194 22.3%,
+    1.057 27%,
+    0.999 29.4%,
+    0.955 32.1%,
+    0.942,
+    0.935 34.9%,
+    0.933,
+    0.939 38.4%,
+    1 47.3%,
+    1.011,
+    1.017 52.6%,
+    1.016 56.4%,
+    1 65.2%,
+    0.996 70.2%,
+    1.001 87.2%,
+    1
+  );
+
+  /* Clouds variables */
+  --clouds-original-width: 752;
+  --clouds-original-height: 500;
+  --clouds-height: 150;
+  --clouds-moveX: calc(
+    (var(--clouds-original-width) / var(--clouds-original-height)) *
+      var(--clouds-height)
+  );
+
+  /* Ground variables */
+  --ground-original-width: 1533;
+  --ground-original-height: 225;
+  --ground-height: 50;
+  --ground-moveX: calc(
+    (var(--ground-original-width) / var(--ground-original-height)) *
+      var(--ground-height)
+  );
+
+  /* Trees Back variables */
+  --trees-original-width: 1433;
+  --trees-original-height: 672;
+  --trees-height: 150;
+  --trees-moveX: calc(
+    (var(--trees-original-width) / var(--trees-original-height)) *
+      var(--trees-height)
+  );
+
+  /* Trees Front variables */
+  --trees-front-original-width: 2259;
+  --trees-front-original-height: 1000;
+  --trees-front-height: 150;
+  --trees-front-moveX: calc(
+    (var(--trees-front-original-width) / var(--trees-front-original-height)) *
+      var(--trees-front-height)
+  );
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #111;
+}
+
+html,
+body {
+  height: 100%;
 }

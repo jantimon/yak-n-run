@@ -1,0 +1,108 @@
+/* Keyframe for horizontal scrolling */
+@keyframes xScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1px * var(--moveX)));
+  }
+}
+
+/* Outermost container, corresponds to 'Back' */
+.back {
+  container-type: inline-size; /* For cqw units if needed by children */
+  width: 100%;
+  overflow: clip;
+  background: #7ea4ad;
+  position: relative;
+}
+
+/* Clouds Layer (using ::before on .back) */
+.back::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  display: block;
+  background: url("./images/clouds.avif");
+  /* Corrected height */
+  height: calc(var(--clouds-height) * 1px);
+  width: max(200%, calc(var(--clouds-moveX) * 2px));
+  background-size: auto 100%;
+  --moveX: var(--clouds-moveX);
+  animation: xScroll 30s linear infinite;
+}
+
+/* Ground Layer (using ::after on .back) */
+.back::after {
+  content: "";
+  margin-top: -223px;
+  display: block;
+  background: url("./images/bottom.avif");
+  /* Corrected height */
+  height: calc(var(--ground-height) * 1px);
+  width: max(200%, calc(var(--ground-moveX) * 2px));
+  background-size: auto 100%;
+  --moveX: var(--ground-moveX);
+  animation: xScroll 1s linear infinite;
+}
+
+/* Container corresponding to 'TreesBack' */
+.treesBack {
+}
+
+/* Back Trees Layer 1 (using ::before on .treesBack) */
+.treesBack::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: block;
+  background: url("./images/trees-back.avif");
+  width: max(200%, calc(var(--trees-moveX) * 2px));
+  /* Corrected height */
+  height: calc(var(--trees-height) * 1px);
+  background-size: auto 100%;
+  --moveX: var(--trees-moveX);
+  animation: xScroll 20s linear infinite;
+}
+
+/* Back Trees Layer 2 (using ::after on .treesBack) */
+.treesBack::after {
+  content: "";
+  position: absolute;
+  top: 150px;
+  left: 0;
+  display: block;
+  background: url("./images/trees-back.avif");
+  width: max(200%, calc(var(--trees-moveX) * 2px));
+  /* Corrected height */
+  height: calc(var(--trees-height) * 1px);
+  background-size: auto 100%;
+  --moveX: var(--trees-moveX);
+  animation: xScroll 15s linear infinite;
+  animation-delay: -0.5s;
+}
+
+/* Container corresponding to 'TreesFront' */
+.treesFront {
+  position: relative;
+  min-height: 250px;
+}
+
+/* Front Trees Layer (using ::after on .treesFront) */
+.treesFront::after {
+  content: "";
+  position: absolute;
+  top: 160px;
+  left: 0;
+  display: block;
+  background: url("./images/trees-front.avif");
+  width: max(200%, calc(var(--trees-front-moveX) * 2px));
+  /* Corrected height */
+  height: calc(var(--trees-front-height) * 1px);
+  background-size: auto 100%;
+  --moveX: var(--trees-front-moveX);
+  animation: xScroll 5s linear infinite;
+  z-index: 1;
+}

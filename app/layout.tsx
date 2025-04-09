@@ -1,3 +1,5 @@
+import "./global.css";
+
 export const metadata = {
   title: "Yak'n'run",
   description: "A yak running experience 🐮",
