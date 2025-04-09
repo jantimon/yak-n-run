@@ -1,22 +1,12 @@
-import { keyframes, styled } from "next-yak";
+import React from "react";
+import styles from "./glow.module.css"; // Import CSS Module
 
-const rotate = keyframes`
- 0% {
-    
-  box-shadow: 0px -25px 105px 0px rgba(45, 171, 255, 0.4);
-}
-  100% {
-    
-  box-shadow: 0px -25px 105px 0px rgba(45, 171, 255,0.6);  
-  }
-`;
-
-const GlowWrapper = styled.div`
-  &:focus-within {
-    animation: ${rotate} 2s infinite alternate;
-  }
-`;
-
-export const Glow = ({ children }) => {
-  return <GlowWrapper>{children}</GlowWrapper>;
+export const Glow = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className={styles.glowWrapper}>
+      {" "}
+      {/* Use imported style */}
+      {children}
+    </div>
+  );
 };

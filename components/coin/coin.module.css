@@ -1,0 +1,53 @@
+@keyframes spin {
+  0% {
+    background-position: -39px -0px;
+  }
+  20% {
+    background-position: -36px -42px;
+  }
+  40% {
+    background-position: -81px -42px;
+  }
+  60% {
+    background-position: -0px -0px;
+  }
+  80% {
+    background-position: -81px -0px;
+  }
+  100% {
+    background-position: 9px -42px;
+  }
+}
+
+.coin {
+  width: 38px;
+  height: 38px;
+  background: url("./images/coin.avif") no-repeat center center;
+  animation-name: spin;
+  animation-duration: 0.7s;
+  animation-timing-function: steps(1);
+  animation-iteration-count: infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes flyThrough {
+  0% {
+    transform: translateX(100cqw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.coinGroup {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  display: flex;
+  gap: 5px;
+  animation-name: flyThrough;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

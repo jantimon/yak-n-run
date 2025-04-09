@@ -1,6 +1,3 @@
-// next.config.js
-import { withYak } from "next-yak/withYak";
-
 const nextConfig = {
   images: {
     disableStaticImages: true,
@@ -16,4 +13,4 @@ const nextConfig = {
   },
 };
 
-export default withYak(nextConfig);
+export default nextConfig;
