@@ -22,7 +22,7 @@ export const HeroController = (props) => (
         const keyframes = Array.from({ length: 100 }, (_, i) => {
           const progress = i / 99;
           const y = Math.sin(progress * Math.PI) * -JUMP_HEIGHT; // Sine curve for smooth jump that emulates gravity
-          return { translate: `0 ${y}px` };
+          return { translate: `0 ${y.toFixed(2)}px` };
         });
 
         animation = button.animate(keyframes, {

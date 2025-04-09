@@ -56,7 +56,7 @@ export const CoinGroup = ({ count }: { count: number }) => (
       <Coin
         key={i}
         css={css`
-          animation-delay: ${() => i * -0.05}s;
+          animation-delay: ${() => (i * -5) / 100}s;
         `}
       />
     ))}
