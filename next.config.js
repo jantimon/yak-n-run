@@ -6,10 +6,10 @@ const nextConfig = {
     disableStaticImages: true,
   },
   webpack(config) {
-    // Add AVIF file handling
+     // treats AVIF files as regular assets
     config.module.rules.push({
       test: /\.(avif)$/i,
-      type: "asset/resource", // This treats AVIF files as regular assets
+      type: "asset/resource",
     });
 
     return config;
