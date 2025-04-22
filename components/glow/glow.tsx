@@ -1,13 +1,11 @@
 import { keyframes, styled } from "next-yak";
 
 const rotate = keyframes`
- 0% {
-    
-  box-shadow: 0px -25px 105px 0px rgba(45, 171, 255, 0.4);
-}
+  0% {  
+    box-shadow: 0px -25px 105px 0px rgba(45, 171, 255, 0.4);
+  }
   100% {
-    
-  box-shadow: 0px -25px 105px 0px rgba(45, 171, 255,0.6);  
+    box-shadow: 0px -25px 105px 0px rgba(45, 171, 255,0.6);  
   }
 `;
 
