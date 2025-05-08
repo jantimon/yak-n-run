@@ -16,4 +16,6 @@ const nextConfig = {
   },
 };
 
-export default withYak(nextConfig);
+export default withYak({
+  turbopack: true,
+},nextConfig);
